@@ -1,3 +1,15 @@
+GET http://localhost:8880/test/list
+
+<> 2022-06-24T111927.200.json
+
+###
+
+GET http://localhost:8880/test/list
+
+<> 2022-06-24T111622.500.json
+
+###
+
 POST http://localhost:8880/hello/post
 Content-Type: application/x-www-form-urlencoded
 
