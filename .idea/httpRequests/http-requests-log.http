@@ -1,3 +1,19 @@
+GET http://localhost:8880/ebook/list
+
+<> 2022-06-26T123018.200.json
+
+###
+
+GET http://localhost:8880/ebook/list
+
+<> 2022-06-26T121423.200.json
+
+###
+
+GET http://localhost:8880/ebook/list
+
+###
+
 GET http://localhost:8880/demo/list1
 
 <> 2022-06-25T022433.200.json
