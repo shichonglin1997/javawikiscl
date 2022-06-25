@@ -1,0 +1,22 @@
+package com.jiawa.wikiscl.service;
+
+
+import com.jiawa.wikiscl.domain.Demo;
+import com.jiawa.wikiscl.mapper.DemoMapper;
+import com.jiawa.wikiscl.mapper.DemoMapper;
+import org.springframework.stereotype.Service;
+
+import javax.annotation.Resource;
+import java.util.List;
+
+@Service
+public class DemoService {
+    @Resource
+    private DemoMapper demoMapper;
+
+    public List<Demo> list(){
+        return demoMapper.selectByExample(null);
+    }
+
+
+}
