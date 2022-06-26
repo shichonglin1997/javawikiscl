@@ -1,0 +1,17 @@
+{
+  "success": true,
+  "message": null,
+  "content": [
+    {
+      "id": 13,
+      "name": "Spring Boot guide lessons",
+      "category1Id": null,
+      "category2Id": null,
+      "description": "Java development，the best framework for enterprise applications",
+      "cover": null,
+      "docCount": 0,
+      "viewCount": 0,
+      "voteCount": 0
+    }
+  ]
+}

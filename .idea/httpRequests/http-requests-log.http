@@ -1,3 +1,91 @@
+GET http://localhost:8880/ebook/list?name=spring
+
+<> 2022-06-26T023406.200.json
+
+###
+
+GET http://localhost:8880/ebook/list?name=spring
+
+<> 2022-06-26T023028.200.json
+
+###
+
+GET http://localhost:8880/ebook/list?name=spring&name=vue
+
+<> 2022-06-26T023012.200.json
+
+###
+
+GET http://localhost:8880/ebook/list?name=spring,vue
+
+<> 2022-06-26T022902.200.json
+
+###
+
+GET http://localhost:8880/ebook/list?name=spring
+
+<> 2022-06-26T022118.200.json
+
+###
+
+GET http://localhost:8880/ebook/list?name=vue&name=spring
+
+<> 2022-06-26T022105.200.json
+
+###
+
+GET http://localhost:8880/ebook/list?name=vue
+
+<> 2022-06-26T021744.200.json
+
+###
+
+GET http://localhost:8880/ebook/list?name=vue
+
+<> 2022-06-26T014655.200.json
+
+###
+
+GET http://localhost:8880/ebook/list?name=spring
+
+<> 2022-06-26T014644.200.json
+
+###
+
+GET http://localhost:8880/ebook/list?name=spring
+
+<> 2022-06-26T013300.200.json
+
+###
+
+GET http://localhost:8880/ebook/list?name=Spring
+
+<> 2022-06-26T013253.200.json
+
+###
+
+GET http://localhost:8880/ebook/list
+
+<> 2022-06-26T013206.200.json
+
+###
+
+GET http://localhost:8880/ebook/list
+
+<> 2022-06-26T013157.200.json
+
+###
+
+GET http://localhost:8880/ebook/list?name=java
+
+<> 2022-06-26T013124.200.json
+
+###
+
+GET http://localhost:8880/ebook/list?name=java
+
+###
+
 GET http://localhost:8880/ebook/list
 
 <> 2022-06-26T123018.200.json
