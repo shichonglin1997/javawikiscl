@@ -1,3 +1,9 @@
+GET http://localhost:8880/ebook/list?name=LYX
+
+<> 2022-07-03T124034.200.json
+
+###
+
 GET http://localhost:8880/ebook/list?name=Spring
 
 <> 2022-07-02T085634.200.json
