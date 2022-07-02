@@ -1,0 +1,72 @@
+{
+  "success": true,
+  "message": null,
+  "content": [
+    {
+      "id": 1,
+      "name": "Spring Boot guide lessons",
+      "category1Id": null,
+      "category2Id": null,
+      "description": "Java development，the best framework for enterprise applications",
+      "cover": null,
+      "docCount": 0,
+      "viewCount": 0,
+      "voteCount": 0
+    },
+    {
+      "id": 2,
+      "name": "Vue guide lessons",
+      "category1Id": null,
+      "category2Id": null,
+      "description": "Vue development，the best framework for enterprise applications",
+      "cover": null,
+      "docCount": 0,
+      "viewCount": 0,
+      "voteCount": 0
+    },
+    {
+      "id": 3,
+      "name": "Python guide lessons",
+      "category1Id": null,
+      "category2Id": null,
+      "description": "Python development，the best framework for enterprise applications",
+      "cover": null,
+      "docCount": 0,
+      "viewCount": 0,
+      "voteCount": 0
+    },
+    {
+      "id": 4,
+      "name": "Mysql guide lessons",
+      "category1Id": null,
+      "category2Id": null,
+      "description": "Mysql development，the best framework for enterprise applications",
+      "cover": null,
+      "docCount": 0,
+      "viewCount": 0,
+      "voteCount": 0
+    },
+    {
+      "id": 5,
+      "name": "Oracle guide lessons",
+      "category1Id": null,
+      "category2Id": null,
+      "description": "Oracle development，the best framework for enterprise applications",
+      "cover": null,
+      "docCount": 0,
+      "viewCount": 0,
+      "voteCount": 0
+    },
+    {
+      "id": 6,
+      "name": "LYX",
+      "category1Id": null,
+      "category2Id": null,
+      "description": "LYX dshuaib",
+      "cover": null,
+      "docCount": 0,
+      "viewCount": 0,
+      "voteCount": 0
+    }
+  ]
+}
