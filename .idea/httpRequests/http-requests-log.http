@@ -1,3 +1,15 @@
+GET http://localhost:8880/ebook/list?name=Spring
+
+<> 2022-07-02T085634.200.json
+
+###
+
+GET http://localhost:8880/ebook/list?name=spring
+
+<> 2022-07-02T085507.200.json
+
+###
+
 GET http://localhost:8880/ebook/list?name=spring
 
 <> 2022-06-26T040918.200.json
