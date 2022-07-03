@@ -6,14 +6,14 @@
             mode="horizontal"
             :style="{ lineHeight: '64px' }"
     >
-      <a-menu-item key="1">
-        nav 1111
+      <a-menu-item key="/">
+        <router-link to="/">Home Page</router-link>
       </a-menu-item>
-      <a-menu-item key="2">
-        nav 2
+      <a-menu-item key="/admin/ebook">
+        <router-link to="/admin/ebook">Ebook Management</router-link>
       </a-menu-item>
-      <a-menu-item key="3">
-        nav 3
+      <a-menu-item key="/about">
+        <router-link to="/about">About us</router-link>
       </a-menu-item>
     </a-menu>
   </a-layout-header>
