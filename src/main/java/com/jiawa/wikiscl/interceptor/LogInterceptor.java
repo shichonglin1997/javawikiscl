@@ -1,3 +1,4 @@
+/*
 package com.jiawa.wikiscl.interceptor;
 
 import org.slf4j.Logger;
@@ -9,9 +10,11 @@ import org.springframework.web.servlet.ModelAndView;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+*/
 /**
  * interceptor：Spring framework，check login and log printing, validation
- */
+ *//*
+
 
 @Component
 public class LogInterceptor implements HandlerInterceptor {
@@ -35,4 +38,4 @@ public class LogInterceptor implements HandlerInterceptor {
         long startTime = (Long) request.getAttribute("requestStartTime");
         LOG.info("------------- LogInterceptor  time consuming：{} ms -------------", System.currentTimeMillis() - startTime);
     }
-}
+}*/

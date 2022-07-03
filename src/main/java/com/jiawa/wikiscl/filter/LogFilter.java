@@ -1,3 +1,4 @@
+/*
 package com.jiawa.wikiscl.filter;
 
 
@@ -33,3 +34,4 @@ public class LogFilter implements Filter {
         LOG.info("------------- LogFilter time consuming：{} ms -------------", System.currentTimeMillis() - startTime);
     }
 }
+*/
