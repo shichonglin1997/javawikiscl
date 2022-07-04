@@ -39,7 +39,7 @@
       const ebooks = ref();
       const pagination = ref({
         current: 1,
-        pageSize: 2,
+        pageSize: 4,
         total: 0
       });
       const loading = ref(false);
@@ -64,15 +64,15 @@
           dataIndex: 'category2Id'
         },
         {
-          title: 'docCount',
+          title: 'doccount',
           dataIndex: 'docCount'
         },
         {
-          title: 'viewCount',
+          title: 'viewcount',
           dataIndex: 'viewCount'
         },
         {
-          title: 'likeCount',
+          title: 'like',
           dataIndex: 'voteCount'
         },
         {
@@ -87,18 +87,24 @@
        **/
       const handleQuery = (params: any) => {
         loading.value = true;
-        axios.get("/ebook/list", params).then((response) => {
+        axios.get("/ebook/list", {
+          params: {
+            page: params.page,
+            size: params.size
+          }
+        }).then((response) => {
           loading.value = false;
           const data = response.data;
-          ebooks.value = data.content;
+          ebooks.value = data.content.list;
 
-          // reset pagination icon
+          // reset the pagination
           pagination.value.current = params.page;
+          pagination.value.total = data.content.total;
         });
       };
 
       /**
-       * click the page num trigger
+       * when click the page num trigger
        */
       const handleTableChange = (pagination: any) => {
         console.log("what is the pagination parameter：" + pagination);
@@ -109,7 +115,10 @@
       };
 
       onMounted(() => {
-        handleQuery({});
+        handleQuery({
+          page: 1,
+          size: pagination.value.pageSize,
+        });
       });
 
       return {
