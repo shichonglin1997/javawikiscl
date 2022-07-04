@@ -1,8 +1,8 @@
 package com.jiawa.wikiscl.req;
 
 
-//request parameters wrapping
-public class EbookSaveReq {
+//accepted request parameters wrapping
+public class EbookSaveReq extends PageReq {
     private Long id;
 
     private String name;

@@ -8,6 +8,7 @@ import com.jiawa.wikiscl.domain.EbookExample;
 import com.jiawa.wikiscl.mapper.EbookMapper;
 import com.jiawa.wikiscl.req.EbookSaveReq;
 import com.jiawa.wikiscl.resp.EbookResp;
+import com.jiawa.wikiscl.resp.PageResp;
 import com.jiawa.wikiscl.util.CopyUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -26,7 +27,7 @@ public class EbookService {
     @Resource
     private EbookMapper ebookMapper;
 
-    public List<EbookResp> list(EbookSaveReq req){
+    public PageResp<EbookResp> list(EbookSaveReq req){
 
         EbookExample ebookExample = new EbookExample();
         // like a where condition
@@ -35,13 +36,24 @@ public class EbookService {
             criteria.andNameLike("%"+req.getName()+"%");
         }
         // to paginate the first sql statement result under this pagehelper statement (selectByExample in this page)
-        PageHelper.startPage(1,3);
+        PageHelper.startPage(req.getPage(),req.getSize());
         List<Ebook> ebookList = ebookMapper.selectByExample(ebookExample);
+
+
+
+        List<EbookResp> respList = CopyUtil.copyList(ebookList, EbookResp.class);
+
         PageInfo<Ebook> pageInfo = new PageInfo<>(ebookList);
         LOG.info("total rows ：{}", pageInfo.getTotal());
         LOG.info("total pages：{}", pageInfo.getPages());
-        List<EbookResp> respList = CopyUtil.copyList(ebookList, EbookResp.class);
-        return respList;
+
+
+        PageResp<EbookResp> pageResp = new PageResp<>();
+
+        pageResp.setTotal(pageInfo.getTotal());
+        pageResp.setList(respList);
+
+        return pageResp;
     }
 
 
