@@ -16,7 +16,7 @@
         </template>
         <template v-slot:action="{ text, record }">
           <a-space size="small">
-            <a-button type="primary">
+            <a-button type="primary" @click="edit(record)">
               edit
             </a-button>
             <a-button type="danger">
@@ -27,6 +27,31 @@
       </a-table>
     </a-layout-content>
   </a-layout>
+
+  <a-modal
+          title="ebook form"
+          v-model:visible="modalVisible"
+          :confirm-loading="modalLoading"
+          @ok="handleModalOk"
+  >
+    <a-form :model="ebook" :label-col="{ span: 6 }" :wrapper-col="{ span: 18 }">
+      <a-form-item label="cover">
+        <a-input v-model:value="ebook.cover" />
+      </a-form-item>
+      <a-form-item label="name">
+        <a-input v-model:value="ebook.name" />
+      </a-form-item>
+      <a-form-item label="category1">
+        <a-input v-model:value="ebook.category1Id" />
+      </a-form-item>
+      <a-form-item label="category2">
+        <a-input v-model:value="ebook.category2Id" />
+      </a-form-item>
+      <a-form-item label="description">
+        <a-input v-model:value="ebook.desc" type="textarea" />
+      </a-form-item>
+    </a-form>
+  </a-modal>
 </template>
 
 <script lang="ts">
@@ -114,6 +139,26 @@
         });
       };
 
+      // -------- form ---------
+      const ebook = ref({});
+      const modalVisible = ref(false);
+      const modalLoading = ref(false);
+      const handleModalOk = () => {
+        modalLoading.value = true;
+        setTimeout(() => {
+          modalVisible.value = false;
+          modalLoading.value = false;
+        }, 2000);
+      };
+
+      /**
+       * edit
+       */
+      const edit = (record: any) => {
+        modalVisible.value = true;
+        ebook.value = record
+      };
+
       onMounted(() => {
         handleQuery({
           page: 1,
@@ -126,7 +171,14 @@
         pagination,
         columns,
         loading,
-        handleTableChange
+        handleTableChange,
+
+        edit,
+
+        ebook,
+        modalVisible,
+        modalLoading,
+        handleModalOk
       }
     }
   });
