@@ -48,7 +48,7 @@
                 <a-input v-model:value="ebook.category2Id"/>
             </a-form-item>
             <a-form-item label="description">
-                <a-input v-model:value="ebook.desc" type="textarea"/>
+                <a-input v-model:value="ebook.description" type="textarea"/>
             </a-form-item>
         </a-form>
     </a-modal>
