@@ -3,7 +3,7 @@ package com.jiawa.wikiscl.resp;
 public class CommonResp<T> {
 
     /**
-     * business success or not
+     * success or not
      */
     private boolean success = true;
 
